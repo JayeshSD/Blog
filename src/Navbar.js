@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 export class Navbar extends Component {
   constructor(props) {
@@ -23,9 +23,9 @@ export class Navbar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <NavLink className="navbar-brand" to="/">
               Blogger
-            </Link>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -44,14 +44,18 @@ export class Navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <NavLink
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/new">
+                  <NavLink className="nav-link" to="/new">
                     Create Post
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
               <form className="d-flex" onSubmit={this.onSubmit}>
